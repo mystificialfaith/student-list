@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Student List</title>
+
+<style>
+body {
+    font-family: "Playfair Display", serif;
+    background: #f2e8e8;
+    padding: 20px;
+}
+
+/* SEARCH BAR */
+#searchInput {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+/* TABLE */
+table {
+    width: 95%;
+    margin: 20px auto 40px;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+th, td {
+    border: 1px solid #d9bcc2;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(135deg, #7a1e2d, #2a060d);
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* BUTTONS */
+.action-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit {
+    background: #a13b4b;
+    color: white;
+}
+
+.delete {
+    background: #2a060d;
+    color: white;
+}
+
+.exit {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 40px;
+    border-radius: 30px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="text-align:center; color:#7a1e2d;">Interactive Student List</h2>
+
+<!-- ✅ SEARCH BAR (NOW IN правильное место) -->
+<input type="text" id="searchInput" placeholder="Search student...">
+
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Birthdate</th>
+    <th>Course</th>
+    <th>Year Level</th>
+    <th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="studentTable"></tbody>
+</table>
+
+<button class="exit" onclick="exitPage()">EXIT</button>
+
+<script src="script.js"></script>
+</body>
+</html>
+
